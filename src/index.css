@@ -1,1 +1,29 @@
-a
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tối ưu hóa UI/UX dành riêng cho thiết bị di động */
+* {
+  -webkit-tap-highlight-color: transparent; /* Tắt khung highlight mặc định khi nhấn trên Mobile */
+  user-select: none; /* Tránh bôi đen chữ khi thao tác bấm nút nhiều lần trong Game */
+}
+
+input, textarea {
+  user-select: text; /* Cho phép nhập liệu text bình thường */
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(20, 20, 35, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+}
+
+.neon-glow-blue {
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+.neon-glow-pink {
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+}
